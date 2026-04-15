@@ -4,9 +4,9 @@
 
 项目当前包含：
 
-- 26 份原始 Excel 数据
+- 29 份原始 Excel 数据
 - 36 个图表脚本（已覆盖当前全部数据 key）
-- 26 张已生成 PNG 图表
+- 29 张已生成 PNG 图表
 - 1 份验证报告 `charts/verify_report.json`
 
 ## 目录说明
@@ -102,6 +102,9 @@
 - `考试创建数`
 - `最近四个正式学期`
 - `近半年评价项名称抽样`
+- `每月报表查看人次（近`
+- `每月报表发布人次（近一年）`
+- `每月教师考核分数录入数（近一年）`
 
 对应脚本分别为：
 
@@ -110,13 +113,16 @@
 - `exam_creation_trend.py`
 - `formal_terms_timeline.py`
 - `evaluation_item_sample_topn.py`
+- `report_views_monthly_trend.py`
+- `report_publishers_monthly_trend.py`
+- `exam_score_entries_trend.py`
 
 ## 验证结果
 
 最近一次全量验收结果：
 
-- `ok=26`
-- `skipped=10`
+- `ok=29`
+- `skipped=7`
 - `failed=0`
 - `total=36`
 

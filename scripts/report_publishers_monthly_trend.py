@@ -14,6 +14,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
         xlsx_path=xlsx_path,
         out_path=out_path,
         title="每月报表发布人次趋势（按发布名）",
+        include_total=False,
     )
 
 
@@ -41,4 +42,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

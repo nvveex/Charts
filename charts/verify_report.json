@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-15T03:12:02.205273+00:00",
-  "python": "/Users/alonair/DEV/doc2/.chartvenv/bin/python",
+  "generated_at": "2026-04-15T05:30:13.244883+00:00",
+  "python": "/Users/alonair/.codex/worktrees/282b/Charts/.chartvenv/bin/python",
   "scripts": [
     {
       "module": "admin_class_attendance_trend",
@@ -237,12 +237,15 @@
     {
       "module": "exam_score_entries_trend",
       "required_key": "每月教师考核分数录入数（近一年）",
-      "matched_files": [],
-      "expected_png": [],
+      "matched_files": [
+        "每月教师考核分数录入数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月教师考核分数录入数（近一年）.png"
+      ],
       "missing_png": [],
       "failures": [],
-      "status": "skipped",
-      "reason": "no input xlsx matched REQUIRED_KEY"
+      "status": "ok"
     },
     {
       "module": "formal_terms_timeline",
@@ -319,22 +322,28 @@
     {
       "module": "report_publishers_monthly_trend",
       "required_key": "每月报表发布人次（近一年）",
-      "matched_files": [],
-      "expected_png": [],
+      "matched_files": [
+        "每月报表发布人次（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月报表发布人次（近一年）.png"
+      ],
       "missing_png": [],
       "failures": [],
-      "status": "skipped",
-      "reason": "no input xlsx matched REQUIRED_KEY"
+      "status": "ok"
     },
     {
       "module": "report_views_monthly_trend",
-      "required_key": "每月自定义报告单查看人次（近",
-      "matched_files": [],
-      "expected_png": [],
+      "required_key": "每月报表查看人次（近",
+      "matched_files": [
+        "每月报表查看人次（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月报表查看人次（近.png"
+      ],
       "missing_png": [],
       "failures": [],
-      "status": "skipped",
-      "reason": "no input xlsx matched REQUIRED_KEY"
+      "status": "ok"
     },
     {
       "module": "school_calendar_events_monthly_trend",

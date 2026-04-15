@@ -221,6 +221,7 @@ def auto_render_rich_chart(
     out_path: str | os.PathLike[str],
     title: str | None = None,
     top_n: int = 5,
+    include_total: bool = True,
 ) -> None:
     wb, ws = load_result_sheet(xlsx_path)
     headers = [ws.cell(1, c).value for c in range(1, ws.max_column + 1)]
@@ -333,13 +334,16 @@ def auto_render_rich_chart(
         if max(other) > 0:
             ax.bar(x, other, bottom=bottom, label="其他", color="#9CA3AF", width=0.8)
 
-        ax2 = ax.twinx()
-        ax2.plot(x, totals, label="合计", color="#111827", linewidth=2.2, linestyle="--")
-        ax2.set_ylabel("合计")
+        if include_total:
+            ax2 = ax.twinx()
+            ax2.plot(x, totals, label="合计", color="#111827", linewidth=2.2, linestyle="--")
+            ax2.set_ylabel("合计")
 
-        h1, l1 = ax.get_legend_handles_labels()
-        h2, l2 = ax2.get_legend_handles_labels()
-        ax.legend(h1 + h2, l1 + l2, frameon=False, ncol=3, loc="upper left")
+            h1, l1 = ax.get_legend_handles_labels()
+            h2, l2 = ax2.get_legend_handles_labels()
+            ax.legend(h1 + h2, l1 + l2, frameon=False, ncol=3, loc="upper left")
+        else:
+            ax.legend(frameon=False, loc="upper left")
     else:
         y = [float(by_time_total[t]) for t in times]
         ax.plot(x, y, label=main_value_col, color="#2563EB", linewidth=2.2)
@@ -358,5 +362,4 @@ def auto_render_rich_chart(
     fig.tight_layout()
     fig.savefig(out_path, dpi=180)
     plt.close(fig)
-
 

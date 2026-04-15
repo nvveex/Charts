@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from .chart_common import configure_logging, init_fonts, load_result_sheet, run_single_chart_script
 
 
-REQUIRED_KEY = "每月自定义报告单查看人次（近"
+REQUIRED_KEY = "每月报表查看人次（近"
 
 
 def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
@@ -55,7 +55,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
             va="bottom",
         )
 
-    plt.title("每月自定义报告单查看人次（近5个月）\n数据截至 2026-03-13")
+    plt.title("每月报表查看人次趋势")
     plt.xlabel("月份")
     plt.ylabel("查看人次")
     plt.grid(True, axis="y", alpha=0.25)
@@ -95,4 +95,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
