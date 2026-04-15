@@ -2,12 +2,6 @@
 
 基于 `originaldata/` 中的 Excel 数据，批量生成学校业务图表，并输出到 `charts/`。
 
-项目当前包含：
-
-- 29 份原始 Excel 数据
-- 36 个图表脚本（已覆盖当前全部数据 key）
-- 29 张已生成 PNG 图表
-- 1 份验证报告 `charts/verify_report.json`
 
 ## 目录说明
 
@@ -20,29 +14,6 @@
   - 公共逻辑统一复用 `scripts/chart_common.py`
 - `charts/`
   - 脚本运行后生成的 PNG 图表和验证报告
-- `tests/`
-  - 集成测试与 key 规则测试
-
-## 脚本命名约定
-
-脚本统一使用业务含义明确的英文名称，而不是随机哈希名，例如：
-
-- `weekly_active_users_trend.py`
-- `school_calendar_events_monthly_trend.py`
-- `teaching_evaluation_submissions_monthly_trend.py`
-- `formal_terms_timeline.py`
-- `evaluation_item_sample_topn.py`
-
-每个脚本都应暴露以下统一接口：
-
-- `REQUIRED_KEY`
-- `render_one(...)`
-- `main(...)`
-
-并支持统一 CLI 参数：
-
-- `--data-dir`
-- `--output-dir`
 
 ## 运行方式
 
@@ -58,30 +29,6 @@
 
 - `charts/*.png`
 - `charts/verify_report.json`
-
-### 2. 运行单个脚本
-
-示例：
-
-```bash
-./.chartvenv/bin/python -m scripts.teaching_evaluation_submissions_monthly_trend \
-  --data-dir originaldata \
-  --output-dir charts
-```
-
-若要生成“每月评教提交人次”图表，可直接运行：
-
-```bash
-./.chartvenv/bin/python -m scripts.teaching_evaluation_submissions_monthly_trend \
-  --data-dir originaldata \
-  --output-dir charts
-```
-
-### 3. 运行测试
-
-```bash
-./.chartvenv/bin/python -m unittest discover -s tests -v
-```
 
 ## 关键规则
 
@@ -110,9 +57,6 @@
 - `考试创建数`
 - `最近四个正式学期`
 - `近半年评价项名称抽样`
-- `每月报表查看人次（近`
-- `每月报表发布人次（近一年）`
-- `每月教师考核分数录入数（近一年）`
 
 对应脚本分别为：
 
@@ -121,24 +65,14 @@
 - `exam_creation_trend.py`
 - `formal_terms_timeline.py`
 - `evaluation_item_sample_topn.py`
-- `report_views_monthly_trend.py`
-- `report_publishers_monthly_trend.py`
-- `exam_score_entries_trend.py`
 
 ## 验证结果
 
 最近一次全量验收结果：
 
-- `ok=29`
-- `skipped=7`
+- `ok=26`
+- `skipped=10`
 - `failed=0`
 - `total=36`
 
 说明当前 `originaldata/` 中已有数据的 key，均可以成功生成对应图表。
-
-## 中文说明补充
-
-- `teaching_evaluation_submissions_monthly_trend.py` 用于生成“每月评教提交人次”图表。
-- 脚本会优先读取 `月`、`评教名称`、`评教提交次数` 这几列。
-- 若 Excel 第二列使用的是 `name` 而不是 `评教名称`，脚本也会兼容处理。
-- 图中会在每根柱子上方直接标出评教名称和对应提交次数。
