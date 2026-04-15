@@ -69,6 +69,14 @@
   --output-dir charts
 ```
 
+若要生成“每月评教提交人次”图表，可直接运行：
+
+```bash
+./.chartvenv/bin/python -m scripts.teaching_evaluation_submissions_monthly_trend \
+  --data-dir originaldata \
+  --output-dir charts
+```
+
 ### 3. 运行测试
 
 ```bash
@@ -127,3 +135,10 @@
 - `total=36`
 
 说明当前 `originaldata/` 中已有数据的 key，均可以成功生成对应图表。
+
+## 中文说明补充
+
+- `teaching_evaluation_submissions_monthly_trend.py` 用于生成“每月评教提交人次”图表。
+- 脚本会优先读取 `月`、`评教名称`、`评教提交次数` 这几列。
+- 若 Excel 第二列使用的是 `name` 而不是 `评教名称`，脚本也会兼容处理。
+- 图中会在每根柱子上方直接标出评教名称和对应提交次数。
