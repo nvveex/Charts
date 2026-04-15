@@ -1,0 +1,444 @@
+{
+  "generated_at": "2026-04-15T03:12:02.205273+00:00",
+  "python": "/Users/alonair/DEV/doc2/.chartvenv/bin/python",
+  "scripts": [
+    {
+      "module": "admin_class_attendance_trend",
+      "required_key": "每周行政班考勤班次（近一年）",
+      "matched_files": [
+        "每周行政班考勤班次（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周行政班考勤班次（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "approval_flow_launches_weekly_trend",
+      "required_key": "每周审批流发起数（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "attended_lessons_trend",
+      "required_key": "每周已考勤课节数（近",
+      "matched_files": [
+        "每周已考勤课节数（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周已考勤课节数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "badge_monthly_awards_trend",
+      "required_key": "每月小红花（认证）颁发数量（近",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "class_adjustments_weekly_trend",
+      "required_key": "每周调代课次数",
+      "matched_files": [
+        "每周调代课次数_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周调代课次数.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "class_hour_exports_monthly_trend",
+      "required_key": "每月课时统计导出次数（近一年）",
+      "matched_files": [
+        "每月课时统计导出次数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月课时统计导出次数（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "course_schedule_ops_trend",
+      "required_key": "每周排课操作数（近一年）",
+      "matched_files": [
+        "每周排课操作数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周排课操作数（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "course_selection_completion",
+      "required_key": "选课列表",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "course_selection_wishes_monthly_trend",
+      "required_key": "每月选课志愿数（近",
+      "matched_files": [
+        "每月选课志愿数（近_14_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月选课志愿数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "course_task_assignments_trend",
+      "required_key": "每周课程任务布置数（近",
+      "matched_files": [
+        "每周课程任务布置数（近_14_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周课程任务布置数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "course_task_submission_review_trend",
+      "required_key": "每周课程任务提交与批阅数（近",
+      "matched_files": [
+        "每周课程任务提交与批阅数（近_14_个月，阈值是_5_人提交_被批阅）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周课程任务提交与批阅数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "custom_report_publishers_monthly_trend",
+      "required_key": "每月自定义报告单发布人次（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "daily_active_users_trend",
+      "required_key": "日活（近",
+      "matched_files": [
+        "日活（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "日活（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "dormitory_score_entries_weekly_trend",
+      "required_key": "每周宿舍分数录入数（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "evaluation_item_created_trend",
+      "required_key": "每周过评项创建数（近",
+      "matched_files": [
+        "每周过评项创建数（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周过评项创建数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "evaluation_item_publication_weekly_trend",
+      "required_key": "每周过评项发布数（近",
+      "matched_files": [
+        "每周过评项发布数（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周过评项发布数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "evaluation_item_sample_topn",
+      "required_key": "近半年评价项名称抽样",
+      "matched_files": [
+        "近半年评价项名称抽样_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "近半年评价项名称抽样.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "evaluation_score_entries_trend",
+      "required_key": "每周过评分录入数（近",
+      "matched_files": [
+        "每周过评分录入数（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周过评分录入数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "exam_creation_trend",
+      "required_key": "考试创建数",
+      "matched_files": [
+        "考试创建数_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "考试创建数.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "exam_score_entries_trend",
+      "required_key": "每月教师考核分数录入数（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "formal_terms_timeline",
+      "required_key": "最近四个正式学期",
+      "matched_files": [
+        "最近四个正式学期_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "最近四个正式学期.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "leave_applications_trend",
+      "required_key": "每周学生",
+      "matched_files": [
+        "每周学生_老师请假数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周学生.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "lesson_observation_participants_weekly_trend",
+      "required_key": "每周听评课人次（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "moral_entries_trend",
+      "required_key": "每周德育分数录入数（近",
+      "matched_files": [
+        "每周德育分数录入数（近_13_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周德育分数录入数（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "notification_volume_weekly_trend",
+      "required_key": "每周通知发送量（近一年）",
+      "matched_files": [
+        "每周通知发送量（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周通知发送量（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "questionnaire_submissions_trend",
+      "required_key": "每周问卷提交数（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "report_publishers_monthly_trend",
+      "required_key": "每月报表发布人次（近一年）",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "report_views_monthly_trend",
+      "required_key": "每月自定义报告单查看人次（近",
+      "matched_files": [],
+      "expected_png": [],
+      "missing_png": [],
+      "failures": [],
+      "status": "skipped",
+      "reason": "no input xlsx matched REQUIRED_KEY"
+    },
+    {
+      "module": "school_calendar_events_monthly_trend",
+      "required_key": "每月校历事件数（近一年）",
+      "matched_files": [
+        "每月校历事件数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月校历事件数（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "student_counts_by_grade",
+      "required_key": "每年级学生人数",
+      "matched_files": [
+        "每年级学生人数_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每年级学生人数.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "teaching_evaluation_submissions_monthly_trend",
+      "required_key": "每月评教提交人次（近",
+      "matched_files": [
+        "每月评教提交人次（近_14_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月评教提交人次（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "term_comment_collection_monthly_trend",
+      "required_key": "每月学期评语采集数（近一年）",
+      "matched_files": [
+        "每月学期评语采集数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每月学期评语采集数（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "timetable_queries_trend",
+      "required_key": "每周课表查询次数（近一年）",
+      "matched_files": [
+        "每周课表查询次数（近一年）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "每周课表查询次数（近一年）.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "user_information_overview",
+      "required_key": "用户信息",
+      "matched_files": [
+        "用户信息_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "用户信息.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "venue_reservations_monthly_trend",
+      "required_key": "场馆预约次数",
+      "matched_files": [
+        "场馆预约次数_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "场馆预约次数.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    },
+    {
+      "module": "weekly_active_users_trend",
+      "required_key": "周活（近",
+      "matched_files": [
+        "周活（近_14_个月）_2026_04_14.xlsx"
+      ],
+      "expected_png": [
+        "周活（近.png"
+      ],
+      "missing_png": [],
+      "failures": [],
+      "status": "ok"
+    }
+  ]
+}
