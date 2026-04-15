@@ -13,6 +13,7 @@ import matplotlib
 # Important: must set backend before importing pyplot.
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+from matplotlib.transforms import ScaledTranslation  # noqa: E402
 from openpyxl import load_workbook  # noqa: E402
 
 
@@ -24,11 +25,27 @@ DEFAULT_FONT_SANS = [
     "DejaVu Sans",
 ]
 
+LEGEND_OUTSIDE_OFFSET_PX = 10
+
 
 def init_fonts() -> None:
     """Init matplotlib font settings for Chinese labels."""
     plt.rcParams["font.sans-serif"] = list(DEFAULT_FONT_SANS)
     plt.rcParams["axes.unicode_minus"] = False
+    plt.rcParams["savefig.bbox"] = "tight"
+    plt.rcParams["savefig.pad_inches"] = LEGEND_OUTSIDE_OFFSET_PX / 180
+
+
+def place_legend_outside(ax, *legend_args, **legend_kwargs):
+    """Place legend outside the plotting area with a fixed 10px gap."""
+    fig = ax.figure
+    offset = ScaledTranslation(LEGEND_OUTSIDE_OFFSET_PX / fig.dpi, 0, fig.dpi_scale_trans)
+    legend_kwargs.setdefault("loc", "upper left")
+    legend_kwargs.setdefault("bbox_to_anchor", (1, 1))
+    legend_kwargs.setdefault("bbox_transform", ax.transAxes + offset)
+    legend_kwargs.setdefault("borderaxespad", 0)
+    legend_kwargs.setdefault("frameon", False)
+    return ax.legend(*legend_args, **legend_kwargs)
 
 
 def key_from_filename(filename: str | os.PathLike[str]) -> str:
@@ -341,13 +358,13 @@ def auto_render_rich_chart(
 
             h1, l1 = ax.get_legend_handles_labels()
             h2, l2 = ax2.get_legend_handles_labels()
-            ax.legend(h1 + h2, l1 + l2, frameon=False, ncol=3, loc="upper left")
+            place_legend_outside(ax, h1 + h2, l1 + l2, ncol=3)
         else:
-            ax.legend(frameon=False, loc="upper left")
+            place_legend_outside(ax)
     else:
         y = [float(by_time_total[t]) for t in times]
         ax.plot(x, y, label=main_value_col, color="#2563EB", linewidth=2.2)
-        ax.legend(frameon=False)
+        place_legend_outside(ax)
 
     ax.set_xticks(x)
     ax.set_xticklabels(times, rotation=30, ha="right")
@@ -362,4 +379,3 @@ def auto_render_rich_chart(
     fig.tight_layout()
     fig.savefig(out_path, dpi=180)
     plt.close(fig)
-

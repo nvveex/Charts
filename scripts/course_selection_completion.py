@@ -6,7 +6,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, run_single_chart_script
+from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, place_legend_outside, run_single_chart_script
 
 
 REQUIRED_KEY = "选课列表"
@@ -93,7 +93,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
     plt.title("选课活动覆盖与完成度（按学生数排序）\n数据截至 2026-03-13")
     plt.xlabel("学生数量")
     plt.grid(True, axis="x", alpha=0.2)
-    plt.legend(frameon=False, ncol=2, loc="lower right")
+    place_legend_outside(plt.gca(), ncol=2)
     plt.tight_layout()
     plt.savefig(out_path, dpi=180)
     plt.close()
@@ -130,4 +130,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

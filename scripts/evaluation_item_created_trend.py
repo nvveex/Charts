@@ -7,7 +7,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, run_single_chart_script
+from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, place_legend_outside, run_single_chart_script
 
 
 REQUIRED_KEY = "每周过评项创建数（近"
@@ -51,7 +51,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
     plt.xlabel("周起始日")
     plt.ylabel("创建数")
     plt.grid(True, axis="y", alpha=0.25)
-    plt.legend(frameon=False)
+    place_legend_outside(plt.gca())
     plt.tight_layout()
     plt.savefig(out_path, dpi=180)
     plt.close()
@@ -88,4 +88,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

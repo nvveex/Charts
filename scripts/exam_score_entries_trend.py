@@ -8,7 +8,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .chart_common import configure_logging, init_fonts, load_result_sheet, run_single_chart_script
+from .chart_common import configure_logging, init_fonts, load_result_sheet, place_legend_outside, run_single_chart_script
 
 
 # Key is derived from file name rule: first '_' before date suffix.
@@ -83,7 +83,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
 
     h1, l1 = ax.get_legend_handles_labels()
     h2, l2 = ax2.get_legend_handles_labels()
-    ax.legend(h1 + h2, l1 + l2, frameon=False, ncol=2, loc="upper left")
+    place_legend_outside(ax, h1 + h2, l1 + l2, ncol=2)
 
     fig.tight_layout()
     fig.savefig(out_path, dpi=180)
@@ -121,4 +121,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

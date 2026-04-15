@@ -7,7 +7,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, run_single_chart_script
+from .chart_common import configure_logging, init_fonts, load_result_sheet, parse_date, place_legend_outside, run_single_chart_script
 
 
 REQUIRED_KEY = "每月小红花（认证）颁发数量（近"
@@ -68,7 +68,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
 
     handles, labels = ax.get_legend_handles_labels()
     handles2, labels2 = ax2.get_legend_handles_labels()
-    ax.legend(handles + handles2, labels + labels2, frameon=False, ncol=2, loc="upper left")
+    place_legend_outside(ax, handles + handles2, labels + labels2, ncol=2)
 
     fig.tight_layout()
     fig.savefig(out_path, dpi=180)
@@ -106,4 +106,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
