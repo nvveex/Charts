@@ -6,7 +6,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .chart_common import configure_logging, init_fonts, load_result_sheet, place_legend_outside, run_single_chart_script
+from .chart_common import configure_logging, init_fonts, load_result_sheet, run_single_chart_script
 
 
 REQUIRED_KEY = "考试创建数"
@@ -87,7 +87,7 @@ def render_one(xlsx_path: str | Path, out_path: str | Path) -> None:
     ax.set_xlabel("月份")
     ax.set_ylabel("考试创建数")
     ax.grid(True, axis="y", alpha=0.25)
-    place_legend_outside(ax, ncol=3)
+    ax.legend(frameon=False, ncol=3, loc="upper left")
 
     fig.tight_layout()
     fig.savefig(out_path, dpi=180)
